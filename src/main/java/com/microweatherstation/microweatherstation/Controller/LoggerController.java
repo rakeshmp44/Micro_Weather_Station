@@ -15,12 +15,12 @@ public class LoggerController {
     @Autowired
     private LoggerService loggerService;
 
-    @PostMapping
+    @PostMapping("/addLogger")
     public Logger saveLogger(@RequestBody Logger logger) {
         return loggerService.saveLogger(logger);
     }
 
-    @GetMapping
+    @GetMapping("/getLogger")
     public List<Logger> getAllLoggers() {
         return loggerService.listAllActiveLoggers();
     }

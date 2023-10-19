@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.beans.factory.annotation.Value;
 
 @Entity
 @AllArgsConstructor
@@ -44,6 +45,6 @@ public class Logger {
     @Column(name = "Rainfall")
     private Double Rf;
 
-    @Column(name = "active",columnDefinition = "TINYINT DEFAULT 1")
-    private int active;
+    @Column(name = "active", nullable = true, columnDefinition = "TINYINT(1) default 1")
+    private int active=1;
 }
