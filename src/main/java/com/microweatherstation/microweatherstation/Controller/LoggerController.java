@@ -10,12 +10,15 @@ import java.util.List;
 @RequestMapping("/api/logger")
 public class LoggerController {
 
+<<<<<<< HEAD
     private final LoggerService loggerService;
 
     public LoggerController(LoggerService loggerService) {
         this.loggerService = loggerService;
     }
 
+=======
+>>>>>>> origin/master
     @PostMapping("/addLogger")
     public Logger saveLogger(@RequestBody Logger logger) {
         return loggerService.saveLogger(logger);

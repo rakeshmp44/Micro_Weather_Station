@@ -9,6 +9,6 @@ import java.util.List;
 
 @Repository
 public interface LoggerRepository extends JpaRepository<Logger, Long> {
-    @Query("SELECT l FROM Logger l WHERE l.active=1")
+    @Query("SELECT l from Logger l WHERE l.active =1")
     List<Logger> listAllActiveLoggerList();
 }
