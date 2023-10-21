@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
 
 @Entity
 @AllArgsConstructor
@@ -45,5 +48,9 @@ public class Logger {
     private Double Rf;
 
     @Column(name = "active",columnDefinition = "TINYINT DEFAULT 1")
-    private int active;
+    private int active=1;
+
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
+    @Column(name = "logger_date")
+    private Date Dt;
 }
